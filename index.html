@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 1</title>
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <i>я взял инфу с <a href="https://www.kp.ru/putevoditel/obrazovanie/povar/" target="_blank">этого</a> сайта</i>
-    <form class="registration">
+    <header>
+        <p>Я прекрасная шапка</p>
+    </header>
+    <aside class="nav">
+        <h3>Оглавление</h3>
+        <ul>
+            <li><a href="#registration">регистрация</a></li>
+            <li><a href="#overview">обзор</a></li>
+            <li><a href="#specialisation">специализация</a></li>
+            <li><a href="#plusesAndMinuses">плюсы и минусы</a></li>
+        </ul>
+    </aside>
+    <form class="registration" id="registration">
+        <i>я взял инфу с <a href="https://www.kp.ru/putevoditel/obrazovanie/povar/" target="_blank">этого</a> сайта</i>
         <h1>Регистрация</h1>
         <label for="email"></label>
         <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
@@ -21,15 +34,9 @@
 
         <button type="submit" onclick="displayValues()">Register</button>
         
-        <script>
-            function displayValues(){
-                var mail = document.getElementById("email").value;
-                var pass = document.getElementById("psw").value;
-                alert("mail: " + mail + " and password: "+ pass)
-            }
-        </script>
+
     </form>
-    <div class="overview">
+    <div class="overview" id="overview">
     <h1>Повар</h1>
     <img src="https://s1.stc.all.kpcdn.net/putevoditel/projectid_346574/images/tild6363-3130-4236-b432-336635623365__20140321_gaf_uv7_214.jpg" alt="povar.png">
     <p><b>Повар</b> — это человек, профессионально занимающийся приготовлением пищи<br>
@@ -51,10 +58,10 @@
     </iframe>
     </div>
 
-    <div class="specialisation">
+    <div class="specialisation" id="specialisation">
         <h2>Специализации</h2>
-        <span>Существует следующее разделение поваров по специализациям:</span>
-        <ul>
+        <span>Существует следующее разделение поваров по специализациям:</span><br>
+        <ul class="myUL">
             <li>
                     <b>Повар-кулинар.</b> Он занимается приготовлением блюд и их оформлением.<br>
                     На кухне работают так называемые линейные повара, отвечающие за конкретную станцию. <br>
@@ -71,9 +78,9 @@
             </li>
         </ul>
     </div>
-    <div class="plusesAndMinuses">
+    <div class="plusesAndMinuses" id="plusesAndMinuses">
         <h2>Плюсы</h2>
-        <ol>
+        <ol class="myOl+">
             <li><b>Много возможностей для трудоустройства.</b> <br>
                 Повар может работать в кафе, ресторанах, <br>
                 городских и заводских столовых, в учебных заведениях.
@@ -92,7 +99,7 @@
             </li>
         </ol>
         <h2>Минусы</h2>
-        <ol>
+        <ol class="myOlplus">
             <li>
                 <b>Тяжелые условия труда. </b>Работа на кухне подразумевает<br>
                  контакт с открытым огнем и острыми предметами в условиях<br>
@@ -104,5 +111,13 @@
             </li>
         </ol>
     </div>
+    <footer><p>Здесь будут контакты</p></footer>
 </body>
 </html>
+<script>
+    function displayValues(){
+        var mail = document.getElementById("email").value;
+        var pass = document.getElementById("psw").value;
+        alert("mail: " + mail + " and password: "+ pass)
+    }
+</script>
