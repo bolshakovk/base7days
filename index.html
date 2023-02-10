@@ -11,7 +11,7 @@
     <header>
         <img src="images/chef_PNG130.png"id="povar" alt="mustache.jpg">
         <button class="log">Login</button>
-        <button class="reg">Sign up</button>
+        <button class="reg" onclick="focusOnReg()">Sign up</button>
     </header>
     <aside class="nav">
         <h3>Оглавление</h3>
@@ -126,4 +126,7 @@
         var pass = document.getElementById("psw").value;
         alert("mail: " + mail + " and password: "+ pass)
     }
+    function focusOnReg() {
+     document.getElementById("registration").scrollIntoView();
+}
 </script>
